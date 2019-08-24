@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public bool playingGame;
     void Start()
     {
-        
+        playingGame = true;
     }
 
     // Update is called once per frame

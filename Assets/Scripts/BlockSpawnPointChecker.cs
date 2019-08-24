@@ -17,7 +17,7 @@ public class BlockSpawnPointChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject"))
+        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject") || other.CompareTag("Environment"))
         {
             objectAlreadyAtSpawn = true;
         }
@@ -25,7 +25,7 @@ public class BlockSpawnPointChecker : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject"))
+        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject") || other.CompareTag("Environment"))
         {
             objectAlreadyAtSpawn = true;
         }
@@ -33,7 +33,7 @@ public class BlockSpawnPointChecker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject"))
+        if (other.CompareTag("PlayerObject") || other.CompareTag("EnemyObject") || other.CompareTag("Environment"))
         {
             objectAlreadyAtSpawn = false;
         }
