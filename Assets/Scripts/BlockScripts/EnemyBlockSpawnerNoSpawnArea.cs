@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBlockSpawner : MonoBehaviour
+public class EnemyBlockSpawnerNoSpawnArea : MonoBehaviour
 {
     [Header("Enemy Block Control")]
     //How long the delay between enemy placing blocks is
@@ -12,7 +12,7 @@ public class EnemyBlockSpawner : MonoBehaviour
     //The box that will be spawned
     public GameObject enemyBox;
     //The game controller so we can get the list of current spawned blocks
-    public GameController gameController;
+    GameController gameController;
 
     //User inputted ymin and ymax and zpos
     [Header("Height and Depth Cords")]
@@ -41,7 +41,7 @@ public class EnemyBlockSpawner : MonoBehaviour
     void Update()
     {
         //Spawn enemy blocks
-        if (Time.time > enemyBlocksDelayTimer && gameController.playingGame)
+        if (Time.time > enemyBlocksDelayTimer && gameController.gameRunning)
         {
             //Pick an x position based on the smallest and largest values
             float xSpawnVal = Mathf.Round(Random.Range(xLeftCord + .5f, xRightCord - .5f));

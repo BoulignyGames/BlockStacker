@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlankRotationController : MonoBehaviour
 {
-    [Header("Plank")]
-    public GameObject plank;
+    GameObject plank;
 
     //Rotation Control
     [Header("Rotation Control")]
@@ -29,7 +28,7 @@ public class PlankRotationController : MonoBehaviour
     float plankRotationTarget;
     //the speed the plank will rotate to the next rotation
     float plankRotationSpeed;
-    public GameController gameController;
+    GameController gameController;
 
 
     // Use this for initialization
@@ -45,7 +44,7 @@ public class PlankRotationController : MonoBehaviour
     {
         //Rotate platform
         //if the current global time is longer than the plank rotation timer its time to rotate again
-        if (Time.time > plankRotationTimer && gameController.playingGame)
+        if (Time.time > plankRotationTimer && gameController.gameRunning)
         {
             plankRotationTarget = Mathf.Round(Random.Range(-maxLeftRotationAnglePlank, maxRightRotationAnglePlank));
 

@@ -5,10 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - DataManager
-  - PlayerBlockSpawnPoint
-  - EnemyObject
-  - PlayerObject
+  - PlayArea
+  - EnemyCube
+  - ScoreText
+  - PlayerCube
   - Environment
+  - EnemySpawner
+  - PlayerSpawner
+  - TimeText
+  - BulletTimeText
   layers:
   - Default
   - TransparentFX
